@@ -11,6 +11,11 @@ eureka:
 spring:
   application:
     name: apigateway-service
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: admin
+    password: test1234
   cloud:
     gateway:
       default-filters:
@@ -79,7 +84,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: refresh, health, beans, httpexchanges
+        include: refresh, health, beans, httpexchanges, busrefresh
 
 #token:
 #  secret: user_token
